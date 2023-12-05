@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    @apply font-serif;
+@layer base {
+ html,
+ body {
+  @apply font-serif bg-primary;
+ }
+
+ button {
+  @apply py-3 px-4 rounded-[15px] min-w-[118px] transition-colors duration-200 border;
+ }
+}
+
+@layer components {
+ .btn-primary {
+  @apply bg-secondary text-white border-transparent hover:bg-transparent hover:text-secondary border hover:border-secondary;
+ }
+
+ .btn-outline {
+  @apply bg-transparent text-secondary border-secondary hover:bg-secondary hover:text-white hover:border-none;
+ }
+
+ .btn-text {
+  @apply p-0 border-none text-secondary;
+ }
 }
