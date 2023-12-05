@@ -9,7 +9,7 @@ export const Shell = ({
  ...rest
 }: ShellProps) => {
  return (
-  <section className={className} {...rest}>
+  <section className={`container ${className}`} {...rest}>
    {children}
   </section>
  );
