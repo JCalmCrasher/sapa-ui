@@ -1,15 +1,19 @@
 import { Card } from "./components/Card";
-import { Navbar, Shell } from "./components/layout";
+import { Footer, Navbar, Shell } from "./components/layout";
+import AbegNa from "./assets/abeg-na.svg";
+import TukayBanner from "./assets/tukay-banner.svg";
+import TukayCurrencyBlue from "./assets/tukay-currency-blue.svg";
+import TukayCurrencyRed from "./assets/tukay-currency-red.svg";
 
 const App = () => {
  return (
   <>
    <Navbar />
-   <Shell>
+   <Shell className="pl-[120px]">
     <div className="flex">
      <div className="w-full">
       <div className="space-y-[36px]">
-       <div>
+       <div className="mt-[102px]">
         <h1>Get your urgent 2k</h1>
         <p>No cash, No wahala get our appllication and deal with Sapa</p>
        </div>
@@ -24,12 +28,16 @@ const App = () => {
         </div>
        </div>
       </div>
-      <div className="flex gap-[23px]">
-       <button>Get Started</button>
-       <button>How it Work</button>
+      <div className="flex gap-[23px] items-center">
+       <button className="btn-primary">Get Started</button>
+       <a href="#">
+        <button className="btn-text">How it Work</button>
+       </a>
       </div>
      </div>
-     <div className="w-full">image goes here</div>
+     <div className="w-full">
+      <img src={AbegNa} alt="" />
+     </div>
     </div>
    </Shell>
    <Shell>
@@ -54,6 +62,33 @@ const App = () => {
      </div>
     </div>
    </Shell>
+
+   <section>
+    <div
+     className="w-full"
+     style={{
+      background: `url(${TukayBanner})`,
+      objectFit: "contain",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      height: "660px"
+     }}
+    />
+   </section>
+
+   <Shell>
+    <div className="flex bg-primary">
+     <div>
+      <h2>Urgent Tukay - the Notes.</h2>
+      <p>No cash, No wahala get our appllication and deal with Sapa</p>
+     </div>
+     <div>
+      <img src={TukayCurrencyRed} alt="" />
+      <img src={TukayCurrencyBlue} alt="" />
+     </div>
+    </div>
+   </Shell>
+   <Footer />
   </>
  );
 };
