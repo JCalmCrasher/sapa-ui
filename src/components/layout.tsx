@@ -36,7 +36,7 @@ const navbarMenus = [
 ];
 export const Navbar = () => {
  return (
-  <header className="md:px-[120px] pt-[25px] font-sans">
+  <header className="px-4 md:px-[120px] pt-[25px] font-sans">
    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
     <span>
      <img src={Logo} alt="tukay" />
@@ -97,7 +97,7 @@ export const Footer = () => {
  ];
 
  return (
-  <footer className="bg-secondary text-white">
+  <footer className="bg-secondary text-white px-4 ">
    <div className="flex flex-col md:flex-row items-center gap-16">
     <img src={FooterBanner} alt="tukay" />
     <div className="flex">

@@ -94,7 +94,7 @@ const App = () => {
     />
    </Shell>
 
-   <Shell className="md:pl-[88px]">
+   <Shell className="md:pl-[88px] px-4">
     <div className="flex flex-col md:flex-row items-center justify-between bg-primary pb-[180px]">
      <div className="flex flex-col space-y-[30px]">
       <h2 className="font-medium text-[40px]">Urgent Tukay - the Notes.</h2>
