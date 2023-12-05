@@ -39,7 +39,7 @@ export const Navbar = () => {
   <header className="px-[120px] pt-[25px] font-sans">
    <div className="flex flex-col md:flex-row items-center justify-between">
     <span>
-     <img src={Logo} alt="" />
+     <img src={Logo} alt="tukay" />
     </span>
     <div className="flex items-center gap-[52px]">
      {navbarMenus.map((menu, i) => (
@@ -76,33 +76,33 @@ export const Footer = () => {
   },
 
   {
-    title: "About",
-    links: [
-     { title: "Our Company" },
-     { title: "Career" },
-     { title: "Investors Relations" },
-     { title: "Social Impact" }
-    ]
-   },
+   title: "About",
+   links: [
+    { title: "Our Company" },
+    { title: "Career" },
+    { title: "Investors Relations" },
+    { title: "Social Impact" }
+   ]
+  },
 
-   {
-    title: "Resources",
-    links: [
-     { title: "Contact" },
-     { title: "Give feedback" },
-     { title: "System status" },
-     { title: "Privacy Policy" }
-    ]
-   },
+  {
+   title: "Resources",
+   links: [
+    { title: "Contact" },
+    { title: "Give feedback" },
+    { title: "System status" },
+    { title: "Privacy Policy" }
+   ]
+  }
  ];
 
  return (
   <footer className="bg-secondary text-white">
    <div className="flex flex-col md:flex-row items-center gap-16">
-    <img src={FooterBanner} alt="" />
+    <img src={FooterBanner} alt="tukay" />
     <div className="flex">
      <div className="flex flex-col md:flex-row space-x-[33px]">
-      <p className="max-w-[416px] text-xl">
+      <p className="max-w-[416px] text-xl font-normal">
        Urgent Tukay - the Notes.
        <br /> No cash, No wahala get our appllication and deal with Sapa
       </p>
@@ -112,7 +112,7 @@ export const Footer = () => {
          <h4 className="font-bold">{menu.title}</h4>
          <ul className="flex flex-col space-y-[6.8px]">
           {menu.links.map((link) => (
-           <li className="font-normal text-[15px]">{link.title}</li>
+           <li className="font-normal text-[15px]"><a href="#">{link.title}</a></li>
           ))}
          </ul>
         </div>

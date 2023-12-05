@@ -50,7 +50,7 @@ const App = () => {
       </div>
      </div>
 
-     <img src={AbegNa} alt="" />
+     <img src={AbegNa} alt="abeg nau" />
     </div>
    </Shell>
    <Shell className="px-0 mb-[31px] py-[34px]">
@@ -94,8 +94,8 @@ const App = () => {
     />
    </Shell>
 
-   <Shell>
-    <div className="flex items-center bg-primary">
+   <Shell className="md:pl-[88px]">
+    <div className="flex items-center justify-between bg-primary pb-[180px]">
      <div className="flex flex-col space-y-[30px]">
       <h2 className="font-medium text-[40px]">Urgent Tukay - the Notes.</h2>
       <p className="text-2xl max-w-[600px]">
@@ -104,8 +104,8 @@ const App = () => {
       <button className="btn-primary w-fit">Get Started</button>
      </div>
      <div>
-      <img src={TukayCurrencyRed} alt="" />
-      <img src={TukayCurrencyBlue} alt="" />
+      <img src={TukayCurrencyRed} alt="gimme tukay na" />
+      <img className="absolute translate-y-[-300px] translate-x-[-11rem]" src={TukayCurrencyBlue} alt="gimme tukay na" />
      </div>
     </div>
    </Shell>
