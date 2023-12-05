@@ -4,7 +4,7 @@ import FooterBanner from "../assets/footer-urgent-2k.svg";
 
 interface ShellProps extends HTMLAttributes<HTMLElement> {}
 export const Shell = ({
- className = "px-[120px]",
+ className = "px-4 md:px-[120px]",
  children,
  ...rest
 }: ShellProps) => {
@@ -64,22 +64,59 @@ export const Navbar = () => {
 };
 
 export const Footer = () => {
+ const footerMenus = [
+  {
+   title: "App",
+   links: [
+    { title: "Learning Modules" },
+    { title: "Partnership" },
+    { title: "Watch demo" },
+    { title: "Event" }
+   ]
+  },
+
+  {
+    title: "About",
+    links: [
+     { title: "Our Company" },
+     { title: "Career" },
+     { title: "Investors Relations" },
+     { title: "Social Impact" }
+    ]
+   },
+
+   {
+    title: "Resources",
+    links: [
+     { title: "Contact" },
+     { title: "Give feedback" },
+     { title: "System status" },
+     { title: "Privacy Policy" }
+    ]
+   },
+ ];
+
  return (
   <footer className="bg-secondary text-white">
-   <div className="flex items-center gap-16">
+   <div className="flex flex-col md:flex-row items-center gap-16">
     <img src={FooterBanner} alt="" />
     <div className="flex">
-     <div className="flex">
-      <div className="flex space-x-[33px]">
-       <p>
-        Urgent Tukay - the Notes. No cash, No wahala get our appllication and
-        deal with Sapa
-       </p>
-       <div className="flex gap-[59.4px]">
-        <div>App</div>
-        <div>About</div>
-        <div>Resources</div>
-       </div>
+     <div className="flex flex-col md:flex-row space-x-[33px]">
+      <p className="max-w-[416px] text-xl">
+       Urgent Tukay - the Notes.
+       <br /> No cash, No wahala get our appllication and deal with Sapa
+      </p>
+      <div className="flex gap-[59.4px]">
+       {footerMenus.map((menu, i) => (
+        <div className="flex flex-col space-y-[9.66px]" key={i}>
+         <h4 className="font-bold">{menu.title}</h4>
+         <ul className="flex flex-col space-y-[6.8px]">
+          {menu.links.map((link) => (
+           <li className="font-normal text-[15px]">{link.title}</li>
+          ))}
+         </ul>
+        </div>
+       ))}
       </div>
      </div>
     </div>

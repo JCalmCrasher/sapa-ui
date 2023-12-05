@@ -5,7 +5,7 @@
 @layer base {
  html,
  body {
-  @apply font-serif bg-primary;
+  @apply font-serif bg-primary text-dark;
  }
 
  button {

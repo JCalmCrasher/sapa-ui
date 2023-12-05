@@ -4,66 +4,84 @@ import AbegNa from "./assets/abeg-na.svg";
 import TukayBanner from "./assets/tukay-banner.svg";
 import TukayCurrencyBlue from "./assets/tukay-currency-blue.svg";
 import TukayCurrencyRed from "./assets/tukay-currency-red.svg";
+import NoMoreSapa from "./assets/no-more-sapa.svg";
+import Beg from "./assets/beg.svg";
+import SendMoney from "./assets/send-money.svg";
 
+const stats = [
+ {
+  number: "20k+",
+  label: "Active users"
+ },
+ {
+  number: "30M+",
+  label: "Download"
+ }
+];
 const App = () => {
  return (
   <>
    <Navbar />
-   <Shell className="pl-[120px]">
-    <div className="flex">
+   <Shell className="pl-4 md:pl-[120px]">
+    <div className="flex flex-col md:flex-row">
      <div className="w-full">
-      <div className="space-y-[36px]">
-       <div className="mt-[102px]">
-        <h1>Get your urgent 2k</h1>
-        <p>No cash, No wahala get our appllication and deal with Sapa</p>
+      <div className="space-y-[49px]">
+       <div className="flex flex-col space-y-[14px] mt-[102px]">
+        <h1 className="font-bold text-[64px] leading-[77px]">
+         Get your urgent 2k
+        </h1>
+        <p className="text-2xl max-w-[600px]">
+         No cash, No wahala get our appllication and deal with Sapa
+        </p>
        </div>
-       <div className="flex gap-[84px]">
-        <div>
-         <span className="block">20k+</span>
-         <small>Active users</small>
+       <div className="space-y-[25px]">
+        <div className="flex font-sans gap-[70px]">
+         {stats.map((stat, i) => (
+          <Stat label={stat.label} number={stat.number} key={i} />
+         ))}
         </div>
-        <div>
-         <span className="block">30M+</span>
-         <small>Download</small>
+        <div className="flex gap-[23px] items-center">
+         <button className="btn-primary">Get Started</button>
+         <a href="#">
+          <button className="btn-text">How it Work</button>
+         </a>
         </div>
        </div>
       </div>
-      <div className="flex gap-[23px] items-center">
-       <button className="btn-primary">Get Started</button>
-       <a href="#">
-        <button className="btn-text">How it Work</button>
-       </a>
-      </div>
      </div>
-     <div className="w-full">
-      <img src={AbegNa} alt="" />
-     </div>
+
+     <img src={AbegNa} alt="" />
     </div>
    </Shell>
-   <Shell>
+   <Shell className="px-0 mb-[31px] py-[34px]">
     <div className="flex flex-col space-y-[26px]">
-     <div className="flex flex-col space-y-[3.6px]">
-      <h2>What you stand to benefit.</h2>
-      <p>This is how our products works</p>
+     <div className="flex flex-col space-y-[3.6px] pb-[26px]">
+      <h2 className="font-medium text-center text-[40px]">
+       What you stand to benefit.
+      </h2>
+      <p className="text-center">This is how our products works</p>
      </div>
-     <div className="flex gap-[86px]">
+     <div className="flex flex-col md:flex-row justify-center gap-[86px]">
       <Card
        title="No more Sapa"
        description={`In Nigerian Pidgin English, "Sapa" is sometimes used to describe financial hardship or running out of money.`}
+       icon={NoMoreSapa}
       />
       <Card
        title="Beg"
        description={`In Nigerian Pidgin English, "Sapa" is sometimes used to describe financial hardship or running out of money.`}
+       icon={Beg}
       />
       <Card
        title="Send money"
        description={`In Nigerian Pidgin English, "Sapa" is sometimes used to describe financial hardship or running out of money.`}
+       icon={SendMoney}
       />
      </div>
     </div>
    </Shell>
 
-   <section>
+   <Shell className="px-0">
     <div
      className="w-full"
      style={{
@@ -74,13 +92,16 @@ const App = () => {
       height: "660px"
      }}
     />
-   </section>
+   </Shell>
 
    <Shell>
-    <div className="flex bg-primary">
-     <div>
-      <h2>Urgent Tukay - the Notes.</h2>
-      <p>No cash, No wahala get our appllication and deal with Sapa</p>
+    <div className="flex items-center bg-primary">
+     <div className="flex flex-col space-y-[30px]">
+      <h2 className="font-medium text-[40px]">Urgent Tukay - the Notes.</h2>
+      <p className="text-2xl max-w-[600px]">
+       No cash, No wahala get our appllication and deal with Sapa
+      </p>
+      <button className="btn-primary w-fit">Get Started</button>
      </div>
      <div>
       <img src={TukayCurrencyRed} alt="" />
@@ -94,3 +115,16 @@ const App = () => {
 };
 
 export default App;
+
+interface StatProps {
+ number?: string;
+ label: string;
+}
+const Stat = ({ label, number = "0" }: StatProps) => {
+ return (
+  <div>
+   <span className="block font-bold text-2xl">{number}</span>
+   <small className="font-normal text-content text-xs">{label}</small>
+  </div>
+ );
+};
