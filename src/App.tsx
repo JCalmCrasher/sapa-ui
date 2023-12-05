@@ -83,19 +83,19 @@ const App = () => {
 
    <Shell className="px-0">
     <div
-     className="w-full"
+     className="w-full h-[150px] sm:h-[300px] lg:h-[660px]"
      style={{
       background: `url(${TukayBanner})`,
       objectFit: "contain",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      height: "660px"
+      // height: "660px"
      }}
     />
    </Shell>
 
    <Shell className="md:pl-[88px]">
-    <div className="flex items-center justify-between bg-primary pb-[180px]">
+    <div className="flex flex-col md:flex-row items-center justify-between bg-primary pb-[180px]">
      <div className="flex flex-col space-y-[30px]">
       <h2 className="font-medium text-[40px]">Urgent Tukay - the Notes.</h2>
       <p className="text-2xl max-w-[600px]">
@@ -105,7 +105,11 @@ const App = () => {
      </div>
      <div>
       <img src={TukayCurrencyRed} alt="gimme tukay na" />
-      <img className="absolute translate-y-[-300px] translate-x-[-11rem]" src={TukayCurrencyBlue} alt="gimme tukay na" />
+      <img
+       className="absolute translate-y-[-300px] md:translate-x-[-11rem]"
+       src={TukayCurrencyBlue}
+       alt="gimme tukay na"
+      />
      </div>
     </div>
    </Shell>

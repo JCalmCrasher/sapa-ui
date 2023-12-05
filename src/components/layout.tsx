@@ -36,12 +36,12 @@ const navbarMenus = [
 ];
 export const Navbar = () => {
  return (
-  <header className="px-[120px] pt-[25px] font-sans">
-   <div className="flex flex-col md:flex-row items-center justify-between">
+  <header className="md:px-[120px] pt-[25px] font-sans">
+   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
     <span>
      <img src={Logo} alt="tukay" />
     </span>
-    <div className="flex items-center gap-[52px]">
+    <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-[52px]">
      {navbarMenus.map((menu, i) => (
       <a
        className={`${
@@ -101,18 +101,20 @@ export const Footer = () => {
    <div className="flex flex-col md:flex-row items-center gap-16">
     <img src={FooterBanner} alt="tukay" />
     <div className="flex">
-     <div className="flex flex-col md:flex-row space-x-[33px]">
+     <div className="flex flex-col md:flex-row md:space-x-[33px]">
       <p className="max-w-[416px] text-xl font-normal">
        Urgent Tukay - the Notes.
        <br /> No cash, No wahala get our appllication and deal with Sapa
       </p>
-      <div className="flex gap-[59.4px]">
+      <div className="flex flex-col md:flex-row gap-[59.4px]">
        {footerMenus.map((menu, i) => (
         <div className="flex flex-col space-y-[9.66px]" key={i}>
          <h4 className="font-bold">{menu.title}</h4>
          <ul className="flex flex-col space-y-[6.8px]">
           {menu.links.map((link) => (
-           <li className="font-normal text-[15px]"><a href="#">{link.title}</a></li>
+           <li className="font-normal text-[15px]">
+            <a href="#">{link.title}</a>
+           </li>
           ))}
          </ul>
         </div>
