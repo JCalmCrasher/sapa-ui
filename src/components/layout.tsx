@@ -36,14 +36,20 @@ const navbarMenus = [
 ];
 export const Navbar = () => {
  return (
-  <header className="px-[120px] pt-[25px]">
+  <header className="px-[120px] pt-[25px] font-sans">
    <div className="flex flex-col md:flex-row items-center justify-between">
     <span>
      <img src={Logo} alt="" />
     </span>
     <div className="flex items-center gap-[52px]">
      {navbarMenus.map((menu, i) => (
-      <a className="font-normal text-lg" href={menu.href} key={i}>
+      <a
+       className={`${
+        menu.active ? "text-black" : "text-content"
+       } font-medium text-lg`}
+       href={menu.href}
+       key={i}
+      >
        {menu.title}
       </a>
      ))}
